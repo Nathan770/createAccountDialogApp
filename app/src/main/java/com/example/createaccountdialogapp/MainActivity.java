@@ -17,9 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         CreateAccount createAccount = new CreateAccount(this);
-        createAccount.show();
-        int height = (int) (getResources().getDisplayMetrics().heightPixels * 0.8);
-        int width = (int) (getResources().getDisplayMetrics().widthPixels * 0.9);
-        createAccount.getWindow().setLayout(width, height);
+
     }
 }
