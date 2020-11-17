@@ -1,0 +1,3 @@
+include ':createAccountlibrary'
+include ':app'
+rootProject.name = "createAccountDialogApp"
