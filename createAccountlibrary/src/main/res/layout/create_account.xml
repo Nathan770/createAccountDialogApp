@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_marginEnd="10dp"
-    android:layout_marginStart="10dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/newAccount_LBL_title"
@@ -15,8 +14,7 @@
         android:gravity="center"
         android:text="Create account"
         android:textSize="30sp"
-        android:layout_marginVertical="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/newAccount_EDT_name"
@@ -24,11 +22,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="name"
+        android:visibility="gone"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:startIconDrawable="@drawable/ic_name">
+        app:boxCornerRadiusTopStart="15dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -44,11 +42,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="email"
+        android:visibility="gone"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:startIconDrawable="@drawable/ic_mail">
+        app:boxCornerRadiusTopStart="15dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -63,11 +61,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="country"
+        android:visibility="gone"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:startIconDrawable="@drawable/ic_country">
+        app:boxCornerRadiusTopStart="15dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -82,11 +80,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="city"
+        android:visibility="gone"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:startIconDrawable="@drawable/ic_city">
+        app:boxCornerRadiusTopStart="15dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -101,11 +99,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="phone number"
+        android:visibility="gone"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:startIconDrawable="@drawable/ic_phone">
+        app:boxCornerRadiusTopStart="15dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -120,11 +118,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="password"
+        android:visibility="gone"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:startIconDrawable="@drawable/ic_password">
+        app:boxCornerRadiusTopStart="15dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -139,11 +137,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="confirm password"
+        android:visibility="gone"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:startIconDrawable="@drawable/ic_password">
+        app:boxCornerRadiusTopStart="15dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
