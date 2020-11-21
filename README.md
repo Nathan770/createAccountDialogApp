@@ -4,6 +4,7 @@
 A library for create Account
 
 <img src="https://github.com/Nathan770/createAccountDialogApp/blob/master/createcountAll.png"  width="512">
+<img src="https://github.com/Nathan770/createAccountDialogApp/blob/master/createcountMail.png"  width="512">
 
 
 ## Setup 
@@ -29,6 +30,7 @@ dependencies {
 
 ###### StepProgress Constructor:
 ```java
+// Create your page with all Box
 EasyForm easyForm = new EasyForm.Builder(this)
                 .setDimensions(width, RelativeLayout.LayoutParams.WRAP_CONTENT)
                 .setNameBox()
@@ -38,6 +40,17 @@ EasyForm easyForm = new EasyForm.Builder(this)
                 .setPhoneBox()
                 .setPasswordBox()
                 .build();
+		
+// Create your page with mail and password
+EasyForm easyForm = new EasyForm.Builder(this)
+                .setDimensions(width, RelativeLayout.LayoutParams.WRAP_CONTENT)
+                .setEmailBox()
+                .setPasswordBox()
+                .build();
+
+		
+// To get the info		
+ Log.d(TAG, "getEasyDialogObject: Got object: " + easyFormObject.toString());		
 		
 ```
 
