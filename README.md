@@ -1,5 +1,8 @@
-# createAccountDialogApp
+# createAccountDialog
 [![](https://jitpack.io/v/Nathan770/createAccountDialogApp.svg)](https://jitpack.io/#Nathan770/createAccountDialogApp)
+
+A library for create Account
+
 
 ## Setup 
 
@@ -19,3 +22,21 @@ dependencies {
   implementation 'com.github.Nathan770:createAccountDialogApp:Tag'
 	}
 ```
+
+## Usage
+
+###### StepProgress Constructor:
+```java
+EasyForm easyForm = new EasyForm.Builder(this)
+                .setDimensions(width, RelativeLayout.LayoutParams.WRAP_CONTENT)
+                .setNameBox()
+                .setEmailBox()
+                .setCityBox()
+                .setCountryBox()
+                .setPhoneBox()
+                .setPasswordBox()
+                .build();
+		
+```
+
+
