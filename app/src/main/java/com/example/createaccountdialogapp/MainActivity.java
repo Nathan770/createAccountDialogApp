@@ -2,14 +2,12 @@ package com.example.createaccountdialogapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputLayout;
 import com.nathan.createaccountlibrary.EasyForm;
 import com.nathan.createaccountlibrary.EasyFormObject;
 import com.nathan.createaccountlibrary.EasyFormSubmitListener;
