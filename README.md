@@ -24,7 +24,7 @@ allprojects {
 Step 2. Add the dependency :
 ```
 dependencies {
-  implementation 'com.github.Nathan770:createAccountDialogApp:1.00.02'
+  implementation 'com.github.Nathan770:createAccountDialogApp:1.01.00'
 	}
 ```
 
