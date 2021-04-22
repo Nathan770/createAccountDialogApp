@@ -16,7 +16,7 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/newAccount_EDT_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -29,10 +29,15 @@
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp">
 
-    </EditText>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/newAccount_EDT_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -45,9 +50,14 @@
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp">
 
-    </EditText>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
 
-    <EditText
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/newAccount_EDT_country"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -60,10 +70,14 @@
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords" />
 
-    </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/newAccount_EDT_city"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -76,9 +90,14 @@
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp">
 
-    </EditText>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords" />
 
-    <EditText
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/newAccount_EDT_phone"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -91,9 +110,14 @@
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp">
 
-    </EditText>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
 
-    <EditText
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/newAccount_EDT_password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -106,9 +130,14 @@
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp">
 
-    </EditText>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
 
-    <EditText
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/newAccount_EDT_confirmPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -121,10 +150,14 @@
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
 
-    </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/newAccount_EDT_submit"
         android:layout_width="match_parent"
         android:layout_height="60dp"
