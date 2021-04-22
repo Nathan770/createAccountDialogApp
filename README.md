@@ -24,7 +24,7 @@ allprojects {
 Step 2. Add the dependency :
 ```
 dependencies {
-  implementation 'com.github.Nathan770:createAccountDialogApp:Tag'
+  implementation 'com.github.Nathan770:createAccountDialogApp:1.00.00'
 	}
 ```
 
@@ -32,8 +32,17 @@ dependencies {
 
 ###### StepProgress Constructor:
 ```java
-// Create your page with all Box
-EasyForm easyForm = new EasyForm.Builder(this)
+
+public class MainActivity extends AppCompatActivity implements EasyFormSubmitListener {
+    private static final String TAG = "EasyTextApp";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+	
+	// Create your page with all Box
+		EasyForm easyForm = new EasyForm.Builder(this)
                 .setDimensions(width, RelativeLayout.LayoutParams.WRAP_CONTENT)
                 .setNameBox()
                 .setEmailBox()
@@ -43,17 +52,22 @@ EasyForm easyForm = new EasyForm.Builder(this)
                 .setPasswordBox()
                 .build();
 		
-// Create your page with mail and password
-EasyForm easyForm = new EasyForm.Builder(this)
+	// Create your page with mail and password
+		EasyForm easyForm = new EasyForm.Builder(this)
                 .setDimensions(width, RelativeLayout.LayoutParams.WRAP_CONTENT)
                 .setEmailBox()
                 .setPasswordBox()
                 .build();
-
-		
-// To get the info		
- Log.d(TAG, "getEasyDialogObject: Got object: " + easyFormObject.toString());		
-		
+     
+     }
+     
+     @Override
+    public void getEasyDialogObject(EasyFormObject easyFormObject) {
+    	// To get the info
+        Log.d(TAG, "getEasyDialogObject: Got object: " + easyFormObject.toString());
+    }
+     
+}     		
 ```
 ## License
 
