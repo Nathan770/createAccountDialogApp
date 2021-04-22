@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements EasyFormSubmitLis
         setContentView(R.layout.activity_main);
 	
 	// Create your page with all Box
-		EasyForm easyForm = new EasyForm.Builder(this)
+		EasyForm easyForm = new EasyForm.Builder(MainActivity.this)
                 .setDimensions(width, RelativeLayout.LayoutParams.WRAP_CONTENT)
                 .setNameBox()
                 .setEmailBox()
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements EasyFormSubmitLis
                 .build();
 		
 	// Create your page with mail and password
-		EasyForm easyForm = new EasyForm.Builder(this)
+		EasyForm easyForm = new EasyForm.Builder(MainActivity.this)
                 .setDimensions(width, RelativeLayout.LayoutParams.WRAP_CONTENT)
                 .setEmailBox()
                 .setPasswordBox()
