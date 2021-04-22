@@ -15,7 +15,11 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class EasyForm extends Dialog {
 
+
+    private static final String TAG = "EasyForm";
+
     public static class Builder {
+
         private Context context;
         private int width, height;
         private boolean doNameBox = false;
@@ -75,20 +79,6 @@ public class EasyForm extends Dialog {
             return easyForm;
         }
     }
-
-
-    //    private void openDialog() {
-//        NewAccountDialog newAccountDialog = new NewAccountDialog(this);
-//        newAccountDialog.show();
-//        int height = (int) (getResources().getDisplayMetrics().heightPixels * 0.8);
-//        int width = (int) (getResources().getDisplayMetrics().widthPixels * 0.9);
-//        newAccountDialog.getWindow().setLayout(width, height);
-//        newAccountDialog.getWindow().setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
-//        newAccountDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//        newAccountDialog.getWindow().setDimAmount(1f);
-//    }
-//
-    private static final String TAG = "EasyForm";
 
     private Context context;
     private Builder builder;
