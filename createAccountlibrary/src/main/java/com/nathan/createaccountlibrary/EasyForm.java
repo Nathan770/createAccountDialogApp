@@ -8,6 +8,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
@@ -83,14 +85,14 @@ public class EasyForm extends Dialog {
     private Context context;
     private Builder builder;
 
-    private TextInputLayout newAccount_EDT_name;
-    private TextInputLayout newAccount_EDT_email;
-    private TextInputLayout newAccount_EDT_phone;
-    private TextInputLayout newAccount_EDT_city;
-    private TextInputLayout newAccount_EDT_country;
-    private TextInputLayout newAccount_EDT_password;
-    private TextInputLayout newAccount_EDT_confirmPassword;
-    private MaterialButton newAccount_EDT_submit;
+    private EditText newAccount_EDT_name;
+    private EditText newAccount_EDT_email;
+    private EditText newAccount_EDT_phone;
+    private EditText newAccount_EDT_city;
+    private EditText newAccount_EDT_country;
+    private EditText newAccount_EDT_password;
+    private EditText newAccount_EDT_confirmPassword;
+    private Button newAccount_EDT_submit;
 
 
     private EasyForm(Context context, Builder builder) {
@@ -155,22 +157,22 @@ public class EasyForm extends Dialog {
         Log.d(TAG, "initReturnObject: ");
         EasyFormObject easyFormObject = new EasyFormObject();
         if (builder.doNameBox) {
-            easyFormObject.setName(newAccount_EDT_name.getEditText().getText().toString());
+            easyFormObject.setName(newAccount_EDT_name.getText().toString());
         }
         if (builder.doEmailBox) {
-            easyFormObject.setEmail(newAccount_EDT_email.getEditText().getText().toString());
+            easyFormObject.setEmail(newAccount_EDT_email.getText().toString());
         }
         if (builder.doCityBox) {
-            easyFormObject.setCity(newAccount_EDT_city.getEditText().getText().toString());
+            easyFormObject.setCity(newAccount_EDT_city.getText().toString());
         }
         if (builder.doCountryBox) {
-            easyFormObject.setCountry(newAccount_EDT_country.getEditText().getText().toString());
+            easyFormObject.setCountry(newAccount_EDT_country.getText().toString());
         }
         if (builder.doPhoneBox) {
-            easyFormObject.setPhone(newAccount_EDT_phone.getEditText().getText().toString());
+            easyFormObject.setPhone(newAccount_EDT_phone.getText().toString());
         }
         if (builder.doPasswordBox) {
-            easyFormObject.setPassword(newAccount_EDT_password.getEditText().getText().toString());
+            easyFormObject.setPassword(newAccount_EDT_password.getText().toString());
         }
         return easyFormObject;
     }
@@ -180,7 +182,7 @@ public class EasyForm extends Dialog {
      */
     private void setViewListeners() {
         Log.d(TAG, "setViewListeners: setting listeners");
-        newAccount_EDT_name.getEditText().addTextChangedListener(new TextWatcher() {
+        newAccount_EDT_name.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -188,7 +190,7 @@ public class EasyForm extends Dialog {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                newAccount_EDT_name.setErrorEnabled(false); // disable error
+               // newAccount_EDT_name.setError("error");// disable error
             }
 
             @Override
@@ -196,7 +198,7 @@ public class EasyForm extends Dialog {
 
             }
         });
-        newAccount_EDT_email.getEditText().addTextChangedListener(new TextWatcher() {
+        newAccount_EDT_email.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -204,7 +206,7 @@ public class EasyForm extends Dialog {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                newAccount_EDT_email.setErrorEnabled(false); // disable error
+               // newAccount_EDT_email.setError("error"); // disable error
             }
 
             @Override
@@ -212,7 +214,7 @@ public class EasyForm extends Dialog {
 
             }
         });
-        newAccount_EDT_city.getEditText().addTextChangedListener(new TextWatcher() {
+        newAccount_EDT_city.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -220,7 +222,7 @@ public class EasyForm extends Dialog {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                newAccount_EDT_city.setErrorEnabled(false); // disable error
+              //  newAccount_EDT_city.setError("error"); // disable error
             }
 
             @Override
@@ -228,7 +230,7 @@ public class EasyForm extends Dialog {
 
             }
         });
-        newAccount_EDT_country.getEditText().addTextChangedListener(new TextWatcher() {
+        newAccount_EDT_country.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -236,7 +238,7 @@ public class EasyForm extends Dialog {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                newAccount_EDT_country.setErrorEnabled(false); // disable error
+               // newAccount_EDT_country.setErrorEnabled(false); // disable error
             }
 
             @Override
@@ -244,7 +246,7 @@ public class EasyForm extends Dialog {
 
             }
         });
-        newAccount_EDT_phone.getEditText().addTextChangedListener(new TextWatcher() {
+        newAccount_EDT_phone.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -252,7 +254,7 @@ public class EasyForm extends Dialog {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                newAccount_EDT_phone.setErrorEnabled(false); // disable error
+               // newAccount_EDT_phone.setErrorEnabled(false); // disable error
             }
 
             @Override
@@ -260,7 +262,7 @@ public class EasyForm extends Dialog {
 
             }
         });
-        newAccount_EDT_password.getEditText().addTextChangedListener(new TextWatcher() {
+        newAccount_EDT_password.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -268,7 +270,7 @@ public class EasyForm extends Dialog {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                newAccount_EDT_password.setErrorEnabled(false); // disable error
+                //newAccount_EDT_password.setErrorEnabled(false); // disable error
             }
 
             @Override
@@ -276,7 +278,7 @@ public class EasyForm extends Dialog {
 
             }
         });
-        newAccount_EDT_confirmPassword.getEditText().addTextChangedListener(new TextWatcher() {
+        newAccount_EDT_confirmPassword.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -284,7 +286,7 @@ public class EasyForm extends Dialog {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                newAccount_EDT_confirmPassword.setErrorEnabled(false); // disable error
+              //  newAccount_EDT_confirmPassword.setErrorEnabled(false); // disable error
             }
 
             @Override
@@ -299,35 +301,35 @@ public class EasyForm extends Dialog {
      */
     private void checkValidInfo() {
         Log.d(TAG, "checkValidInfo: Checking valid input");
-        if (newAccount_EDT_name.getEditText().getText().toString().equals("") && builder.doNameBox) {
+        if (newAccount_EDT_name.getText().toString().equals("") && builder.doNameBox) {
             Log.d(TAG, "checkForValidInputs: first name invalid");
             newAccount_EDT_name.setError("Please enter a name");
             return;
         }
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(newAccount_EDT_email.getEditText().getText().toString()).matches()
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(newAccount_EDT_email.getText().toString()).matches()
                 && builder.doEmailBox) {
             Log.d(TAG, "checkForValidInputs: Email invalid");
             newAccount_EDT_email.setError("Please enter a valid email address");
             return;
         }
-        if (newAccount_EDT_city.getEditText().getText().toString().equals("") && builder.doCityBox) {
+        if (newAccount_EDT_city.getText().toString().equals("") && builder.doCityBox) {
             Log.d(TAG, "checkForValidInputs: invalid city");
             newAccount_EDT_city.setError("Please enter a city");
             return;
         }
-        if (newAccount_EDT_country.getEditText().getText().toString().equals("") && builder.doCountryBox) {
+        if (newAccount_EDT_country.getText().toString().equals("") && builder.doCountryBox) {
             Log.d(TAG, "checkForValidInputs: invalid city");
             newAccount_EDT_country.setError("Please enter a city");
             return;
         }
-        if (newAccount_EDT_phone.getEditText().getText().toString().equals("") && builder.doPhoneBox) {
+        if (newAccount_EDT_phone.getText().toString().equals("") && builder.doPhoneBox) {
             Log.d(TAG, "checkForValidInputs: invalid phone");
             newAccount_EDT_phone.setError("Please enter phone number");
             return;
         }
-        if ((newAccount_EDT_password.getEditText().getText().toString().equals("")
-                || newAccount_EDT_password.getEditText().getText().toString().length() < 6) && builder.doPasswordBox) {
-            if (newAccount_EDT_password.getEditText().getText().toString().length() < 6) {
+        if ((newAccount_EDT_password.getText().toString().equals("")
+                || newAccount_EDT_password.getText().toString().length() < 6) && builder.doPasswordBox) {
+            if (newAccount_EDT_password.getText().toString().length() < 6) {
                 Log.d(TAG, "checkForValidInputs: short password");
                 newAccount_EDT_password.setError("Please enter at least 6 digits");
                 return;
@@ -337,15 +339,15 @@ public class EasyForm extends Dialog {
                 return;
             }
         }
-        if (newAccount_EDT_confirmPassword.getEditText().getText().toString().equals("") && builder.doPasswordBox) {
+        if (newAccount_EDT_confirmPassword.getText().toString().equals("") && builder.doPasswordBox) {
             Log.d(TAG, "checkForValidInputs: confirm invalid");
             newAccount_EDT_confirmPassword.setError("Please confirm password");
             return;
         }
-        if (!newAccount_EDT_password.getEditText().getText().toString()
-                .equals(newAccount_EDT_confirmPassword.getEditText().getText().toString()) && builder.doPasswordBox) {
+        if (!newAccount_EDT_password.getText().toString()
+                .equals(newAccount_EDT_confirmPassword.getText().toString()) && builder.doPasswordBox) {
             Log.d(TAG, "checkForValidInputs: Passwords doesn't match");
-            newAccount_EDT_confirmPassword.getEditText().setText("");
+            newAccount_EDT_confirmPassword.setText("");
             newAccount_EDT_confirmPassword.setError("Passwords didn't match");
             return;
         }
